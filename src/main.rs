@@ -32,7 +32,7 @@ fn main() {
                 let t: f32 = sin_i * cos_j2 * cos_a - sin_j * sin_a;
                 // 40 is the left screen shift
                 let x: i32 = (40.0 + 30.0 * mess * (cos_i * cos_j2 * cos_b - t * sin_b)) as i32;
-                // 12 is the down screen shift
+                // 12 is the bottom screen shift
                 let y: i32 = (12.0 + 15.0 * mess * (cos_i * cos_j2 * sin_b + t * cos_b)) as i32;
                 let o: usize = (x + WIDTH * y) as usize;
                 // multiplying by 8 to bring in range 0-11 as 8*(sqrt(2))=11
