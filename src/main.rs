@@ -9,6 +9,7 @@ fn main() {
 
     loop {
         let mut zbuffer: [f32; SCREEN_SIZE] = [0.0; SCREEN_SIZE];
+
         let mut output: [char; SCREEN_SIZE] = [' '; SCREEN_SIZE];
 
         for j in (0..=628).step_by(7) {
@@ -66,7 +67,7 @@ fn main() {
         }
         // print
         print!("\x1b[H");
-        for index in 0..output.len() {
+        for (index, _) in output.iter().enumerate() {
             let i: i32 = index as i32;
             if i % WIDTH == 0 {
                 println!();
